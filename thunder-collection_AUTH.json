@@ -1,0 +1,32 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "AUTH",
+    "dateExported": "2023-11-27T09:31:22.205Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "f2c5b815-d722-4a37-885e-b5f34006ce87",
+            "colId": "f447bba9-c005-40b5-966f-d1e56617a009",
+            "containerId": "",
+            "name": "/POST login",
+            "url": "localhost:8080/auth/login",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-11-26T10:43:43.804Z",
+            "modified": "2023-11-27T09:25:12.641Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\"login\": \"alvaro\", \"password\": \"1234567\"}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2dpbiI6ImFsdmFybyIsImlhdCI6MTcwMDk5NTYzNywiZXhwIjoxNzAxMDAyODM3fQ.Kr5iPrJheZwQEW6qKsu5OkhUcGqpt4Jk4VGi4qWJwVY\""
+            },
+            "tests": []
+        }
+    ]
+}

@@ -1,0 +1,29 @@
+    {% extends "base.njk" %}
+    {% block contenido %}
+        <h1>Inserción de nueva limpieza</h1>
+        {% if errores.general %}
+            <p class="alert alert-danger">{{ errores.general }}</p>
+        {% endif %}
+
+        <form action="/limpiezas/{{habitacion.id}}" method="post"> 
+            <p>{{habitacion.id}}</p>
+              <div class="form-group">
+                <label for="fechaHora">Fecha:</label>
+                {% if errores.fechaHora %}
+                    <p class="text-danger">{{ errores.fechaHora }}</p>
+                {% endif %}
+                <input type="date" class="form-control" name="fechaHora" value="{{ fecha | date("YYYY-MM-DD")}}"></input>
+            </div>
+            <div class="form-group">
+                <label for="observaciones">Observaciones:</label>
+                {% if errores.observaciones %}
+                    <p class="text-danger">{{ errores.observaciones }}</p>
+                {% endif %}
+                <textarea type="text" class="form-control" name="observaciones" placeholder="Descripcion de la habitacion..."></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </div>
+        </form>
+
+    {% endblock %}

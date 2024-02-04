@@ -1,0 +1,32 @@
+{% extends "base.njk" %}
+{% block contenido %}
+ <div class="container">
+    <h1 class="mt-4 mb-4">Listado de habitaciones</h1>
+    <div class="row">
+        <ul class="list-group">
+            {% if habitaciones %}
+                {% for habitacion in habitaciones %}
+                    <li class="list-group-item {% if loop.index % 2 == 0 %}even{% else %}odd{% endif %}">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span>{{ habitacion.descripcion }}</span>
+                            <div class="btn-group">
+                                <a href="/habitaciones/{{ habitacion.id }}" class="btn btn-primary">Ver Ficha</a>
+                                <a href="/limpiezas/{{ habitacion.id }}" class="btn btn-primary">Ver Limpiezas</a>
+                                {% if (session and session.usuario) %}
+
+                                <a class="btn btn-primary" href="/habitaciones/editar/{{ habitacion.id }}">Editar</a>
+                                {% endif %}
+
+                            </div>
+                        </div>
+                    </li>
+                {% endfor %}
+            {% else %}
+                <li class="list-group-item">No hay habitaciones que mostrar.</li>
+            {% endif %}
+        </ul>
+    </div>
+</div>
+
+
+{% endblock %}

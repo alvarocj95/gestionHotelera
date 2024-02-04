@@ -1,0 +1,155 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "HABITACIONES",
+    "dateExported": "2023-11-27T09:30:42.070Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "c55f7fe7-850a-4278-a694-a8dca920daaf",
+            "colId": "00e0441e-1357-43a4-8b6a-19a1eabf6922",
+            "containerId": "",
+            "name": "/GET habitaciones",
+            "url": "localhost:8080/habitaciones",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-11-14T16:59:43.047Z",
+            "modified": "2023-11-15T17:01:08.540Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "1140d0e2-982d-421c-b3a7-ce86cf304a60",
+            "colId": "00e0441e-1357-43a4-8b6a-19a1eabf6922",
+            "containerId": "",
+            "name": "/GET habitaciones/:id",
+            "url": "localhost:8080/habitaciones/5e5e5e5e5e5e5e5e5e5e5e5e",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-11-14T17:10:31.033Z",
+            "modified": "2023-11-14T17:11:03.054Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "b3b8f2c0-9ba6-4107-83de-06784a9f4a3c",
+            "colId": "00e0441e-1357-43a4-8b6a-19a1eabf6922",
+            "containerId": "",
+            "name": "/POST habitaciones",
+            "url": "localhost:8080/habitaciones",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-11-14T17:11:29.120Z",
+            "modified": "2023-11-14T17:20:42.472Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\"numero\": 23, \n\"tipo\": \"doble\", \n\"descripcion\": \"Habitación de prueba\", \n\"precio\": 200}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "3adced52-66df-4de0-8f0b-903b10045932",
+            "colId": "00e0441e-1357-43a4-8b6a-19a1eabf6922",
+            "containerId": "",
+            "name": "/PUT habitaciones",
+            "url": "localhost:8080/habitaciones/5e5e5e5e5e5e5e5e5e5e5e5e",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2023-11-14T17:21:42.996Z",
+            "modified": "2023-11-14T17:22:34.399Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\"numero\": 23, \n\"tipo\": \"doble\", \n\"descripcion\": \"Habitación de prueba 2\", \n\"precio\": 200}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "cd2a527e-4e8f-4685-9f59-a05e791d5f59",
+            "colId": "00e0441e-1357-43a4-8b6a-19a1eabf6922",
+            "containerId": "",
+            "name": "/DELETE habitaciones/:id",
+            "url": "localhost:8080/habitaciones/5e5e5e5e5e5e5e5e5e5e5e5e",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2023-11-14T17:23:27.286Z",
+            "modified": "2023-11-14T17:23:40.589Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "22c94b01-a8b2-43e7-b920-e29f40461c03",
+            "colId": "00e0441e-1357-43a4-8b6a-19a1eabf6922",
+            "containerId": "",
+            "name": "/POST incidencias",
+            "url": "localhost:8080/habitaciones/1a1a1a1a12a1a1a1a1a1a1a1a/incidencias",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2023-11-14T17:25:31.928Z",
+            "modified": "2023-11-14T17:28:06.604Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\"descripcion\": \"Incidencia de prueba\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "80d8ca63-6055-49e6-97b0-4cea2b9c4d8f",
+            "colId": "00e0441e-1357-43a4-8b6a-19a1eabf6922",
+            "containerId": "",
+            "name": "/PUT incidencia",
+            "url": "localhost:8080/habitaciones/4d4d4d4d4d4d4d4d4d4d4d4d/incidencias/10014d4d4d4d4d4d4d4d4d4d",
+            "method": "PUT",
+            "sortNum": 70000,
+            "created": "2023-11-14T17:43:53.902Z",
+            "modified": "2023-11-14T18:01:59.407Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\"descripcion\": \"Ya funciona el aire otra vez\"}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "34e03bf1-5592-43f4-91c0-8ed0007f7008",
+            "colId": "00e0441e-1357-43a4-8b6a-19a1eabf6922",
+            "containerId": "",
+            "name": "/PUT ultimaIncidencia",
+            "url": "localhost:8080/habitaciones/1a1a1a1a1a1a1a1a1a1a1a1a/ultimaLimpieza",
+            "method": "PUT",
+            "sortNum": 80000,
+            "created": "2023-11-15T16:58:35.842Z",
+            "modified": "2023-11-15T21:55:09.947Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "7bbcabf9-cf77-40e1-84ff-e1a834e8efb7",
+            "colId": "00e0441e-1357-43a4-8b6a-19a1eabf6922",
+            "containerId": "",
+            "name": "/PUT ultimaLimpieza",
+            "url": "localhost:8080/habitaciones/ultimaLimpieza",
+            "method": "PUT",
+            "sortNum": 90000,
+            "created": "2023-11-15T20:56:08.438Z",
+            "modified": "2023-11-15T20:57:11.676Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

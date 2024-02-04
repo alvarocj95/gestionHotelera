@@ -1,0 +1,23 @@
+{% extends "base.njk" %}
+{% block titulo %}Limpiezas de una Habitación | Ficha{% endblock %}
+{% block contenido %}
+    <div class="container">
+        <h1 class="mt-4 mb-4">Ficha de limpiezas de la habitación {{ habitacion.id }}</h1>
+        <div class="row">
+            <div class="col-6">
+                {% for limpieza in limpiezas %}
+                    <p>
+                        <strong>Fecha y hora:</strong>
+                        {{ limpieza.fechaHora | date("DD/MM/YYYY") }}</p>
+                    <p>
+                        <strong>Observaciones:</strong>
+                        {{ limpieza.observaciones }}</p>
+                    <hr>
+                    {% endfor %}
+                    {% if (session and session.usuario) %}
+                        <a href="/limpiezas/nueva/{{ habitacion.id }}" class="btn btn-primary">Añadir una nueva limpieza a la habitación</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    {% endblock %}
